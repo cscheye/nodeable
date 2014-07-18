@@ -1,10 +1,19 @@
-exports.text = "hello world...?";
+var fs = require('fs')
+
 exports.index = function(request, response){
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("no guac?")
+  render('templates/index.html', response);
 };
 
 exports.hello = function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("hello!")
+  render('templates/hello.html', response);
 };
+
+var render = function (filename, response) {
+  fs.readFile(filename, function(error, html){
+    if(!error){
+      response.writeHead(200, {"Content-Type": "text/html"});
+      response.write(html)
+    }
+    response.end();
+  })
+}
