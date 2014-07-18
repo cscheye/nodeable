@@ -11,11 +11,9 @@ var handleError = function (request, response) {
 }
 
 var server = http.createServer(function (request, response) {
-  // response.end(util.inspect(request));
-
   var fun = router.resolve(request) || handleError;
   fun(request, response);
 });
 
-// Listen on port 8000, IP defaults to 127.0.0.1
-server.listen(8000);
+var port = Number(process.env.PORT || 5000);
+server.listen(port);
