@@ -1,12 +1,7 @@
 {
   "name": "nodeable",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Practicing node",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/CristiScheye/nodeable.git"
@@ -16,5 +11,10 @@
   "bugs": {
     "url": "https://github.com/CristiScheye/nodeable/issues"
   },
-  "homepage": "https://github.com/CristiScheye/nodeable"
+  "homepage": "https://github.com/CristiScheye/nodeable",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "0.8.x"
+  }
 }
