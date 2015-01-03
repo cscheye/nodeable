@@ -12,6 +12,11 @@ var init = function(cb) {
       geddy.log.error(msg);
     });
   }
+  // temp, until db is set up
+  geddy.entries = []
+
+  geddy.model.adapter = {};
+  geddy.model.adapter.Entry = require(process.cwd() + '/lib/model_adapters/entry').Entry;
   cb();
 };
 
