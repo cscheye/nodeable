@@ -1,6 +1,12 @@
-var init = function(cb) {
+var mongo = require('mongodb-wrapper')
+  , init
+
+init = function init(cb) {
+  geddy.db = mongo.db('localhost', 7017, 'nodeable')
+  geddy.db.collection('entries')
+
   // Add uncaught-exception handler in prod-like environments
-  if (geddy.config.environment != 'development') {
+  if (geddy.config.environment !== 'development') {
     process.addListener('uncaughtException', function (err) {
       var msg = err.message;
       if (err.stack) {
@@ -12,8 +18,6 @@ var init = function(cb) {
       geddy.log.error(msg);
     });
   }
-  // temp, until db is set up
-  geddy.entries = []
 
   geddy.model.adapter = {};
   geddy.model.adapter.Entry = require(process.cwd() + '/lib/model_adapters/entry').Entry;

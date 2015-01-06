@@ -12,7 +12,9 @@
     "url": "https://github.com/CristiScheye/nodeable/issues"
   },
   "homepage": "https://github.com/CristiScheye/nodeable",
-  "dependencies": {},
+  "dependencies": {
+    "mongodb-wrapper": "1.0.x"
+    },
   "devDependencies": {},
   "engines": {
     "node": "0.8.x"
