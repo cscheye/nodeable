@@ -3,3 +3,4 @@ npm-debug.log
 log/
 _session_store.json
 node_modules/
+_datastore.json
