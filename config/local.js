@@ -35,13 +35,23 @@ var config = {
 , hostname: null
 , port: 4000
 , model: {
-    defaultAdapter: 'filesystem'
+    defaultAdapter: 'mongo'
   }
 , sessions: {
     store: 'filesystem'
   , filename: '_session_store.json'
   , key: 'sid'
   , expiry: 14 * 24 * 60 * 60
+  }
+, db: {
+    mongo: {
+      username: null
+    , dbname: 'test'
+    , prefix: null
+    , password: null
+    , host: 'localhost'
+    , port: 27017
+    }
   }
 };
 

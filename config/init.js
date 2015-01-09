@@ -2,7 +2,7 @@ var mongo = require('mongodb-wrapper')
   , init
 
 init = function init(cb) {
-  geddy.db = mongo.db('localhost', 7017, 'nodeable')
+  geddy.db = mongo.db('localhost', 27017, 'nodeable')
   geddy.db.collection('entries')
 
   // Add uncaught-exception handler in prod-like environments
