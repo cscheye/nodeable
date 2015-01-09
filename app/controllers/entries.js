@@ -4,7 +4,6 @@ var Entries = function () {
   this.index = function (req, resp, params) {
     var self = this
     geddy.model.Entry.all(function(err, entries){
-      console.log(entries)
       if (err)
         throw err
       else
