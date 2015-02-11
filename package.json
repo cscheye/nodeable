@@ -1,24 +1,17 @@
 {
   "name": "nodeable",
   "version": "0.0.1",
-  "description": "Practicing node",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/CristiScheye/nodeable.git"
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
   },
-  "author": "Cristi Scheye",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CristiScheye/nodeable/issues"
-  },
-  "homepage": "https://github.com/CristiScheye/nodeable",
   "dependencies": {
-    "mongodb-wrapper": "1.0.x",
-    "lodash": "2.4.x",
-    "mongodb": "1.x"
-  },
-  "devDependencies": {},
-  "engines": {
-    "node": "0.8.x"
+    "express": "~4.2.0",
+    "static-favicon": "~1.0.0",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "ejs": "~0.8.5"
   }
 }

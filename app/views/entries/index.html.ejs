@@ -1,7 +1,0 @@
-<h1>entries index</h1>
-<ul>
-  <% for (var i = 0; i < entries.length; i++) { %>
-    <li><a href="/entries/<%= entries[i].id%>"><%= entries[i].title ? entries[i].title : entries[i].createdAt %></li>
-  <% } %>
-</ul>
-<a href="/entries/add">+ New Entry</a>
